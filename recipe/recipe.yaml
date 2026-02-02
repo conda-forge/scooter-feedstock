@@ -27,6 +27,7 @@ build:
 requirements:
   build:
     - ${{ compiler('rust') }}
+    - ${{ compiler('cxx') if linux }}
     - ${{ stdlib('c') }}
     - cargo-bundle-licenses
     - cargo-auditable
